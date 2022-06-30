@@ -90,7 +90,7 @@ SuzuneHorikitarobot_IMG = choice(pic_list)
 PM_START_TEXT = """
 Hey Animelover!
 
-I'm 𝙸𝚜𝚊𝚋𝚎𝚕𝚕𝚊, I can help you to manage your group! Just add me to your group.\n\nDo wanna know what i can do?, Then hit /help to find out my features.
+I'm 𝙸𝚜𝚊𝚋𝚎𝚕𝚕𝚊, I can help you to manage your group! Just add me to your group.\n\nDo you wanna know what i can do?, Then hit /help to find out about my features.
 
 Join My Updates Channel to get information on all the latest updates.
 
