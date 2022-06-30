@@ -81,27 +81,16 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 pic_list = [
-    "https://te.legra.ph/file/dd1edbad33718b9521d31.jpg",
-    "https://te.legra.ph/file/79092be2eeb4668a9e3be.jpg",
-    "https://te.legra.ph/file/549704a3754fcc7ca5e74.jpg",
-    "https://te.legra.ph/file/289f112b6f16edc9e11bc.jpg",
-    "https://te.legra.ph/file/517e2d114390df1a9a7aa.jpg",
-    "https://te.legra.ph/file/8654c27dc2282f542d870.jpg",
-    "https://te.legra.ph/file/cf83af6cb6a99e8c19a7e.jpg",
-    "https://te.legra.ph/file/c65c872745c4961474ce4.jpg",
-    "https://te.legra.ph/file/d87f588763a834aa77aa4.jpg",
-    "https://te.legra.ph/file/d9eb3ede71879999bfaac.jpg",
-    "https://te.legra.ph/file/562396308049c01531315.jpg",
-    "https://te.legra.ph/file/c941d5cf0c8910c38ab2c.jpg",
+"https://telegra.ph/Isabella-06-30""
 ]
     
 
 SuzuneHorikitarobot_IMG = choice(pic_list)
 
 PM_START_TEXT = """
-Hello Dear ♡︎ !
+Hey Animelover!
 
-My name is Suzune Horikita - I'm here to help you manage your groups! Hit /help to find out more about how to use me to my full potential.
+I'm 𝙸𝚜𝚊𝚋𝚎𝚕𝚕𝚊, I can help you to manage your group! Just add me to your group.\n\nDo wanna know what i can do?, Then hit /help to find out my features.
 
 Join My Updates Channel to get information on all the latest updates.
 
@@ -110,29 +99,26 @@ Join My Updates Channel to get information on all the latest updates.
 buttons = [
     [
         InlineKeyboardButton(
-            text="Add Me To Your Group", url="https://t.me/Suzune_Superbot?startgroup=true"),
+            text="➕ Add Me To Your Group ➕", url="http://t.me/isabella_xrobot?startgroup=true"),
     ],
     [
-        InlineKeyboardButton(text="Support Chat", url="https://t.me/Suzune_Support"),
+        InlineKeyboardButton(text="🗣 Support Chat 🗣", url="https://t.me/isabella_support"),
         InlineKeyboardButton(
-            text="Updates Channel", url="https://t.me/SuzuneSuperbot"),
-    ],
-    [
-        InlineKeyboardButton(text="•Source Code•", url="https://github.com/desinobita/SuzuneHorikita"),
+            text="Updates Channel", url="https://t.me/isabella_support"),
     ],
 ]
 
 
 HELP_STRINGS = """
-* 𝐒ᴜᴢᴜɴᴇ 𝐇ᴏʀɪᴋɪᴛᴀ Is Here with
+ Here's my all features
 AI Chatbot, Anime, Music, Notes, Filters, NSFW and more!
  All commands can either be used with / or !.
- Reach out for support: @Suzune_Support.*"""
+ Reach out for support: @isabella_support.*"""
 
 
 
 DONATE_STRING = """Glad to hear you want to donate!
- @TheVenomXD """
+ @cant_think_1 """
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -217,7 +203,7 @@ def start(update: Update, context: CallbackContext):
                     update.effective_chat.id,
                     HELPABLE[mod].__help__,
                     InlineKeyboardMarkup(
-                        [[InlineKeyboardButton(text="⬅️ BACK", callback_data="help_back")]]
+                        [[InlineKeyboardButton(text="↻ BACK", callback_data="help_back")]]
                     ),
                 )
 
@@ -249,7 +235,7 @@ def start(update: Update, context: CallbackContext):
             ),
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url="t.me/Suzune_Support ")]]
+                [[InlineKeyboardButton(text="🗣 Support Chat 🗣", url="https://t.me/isabella_support")]]
             ),
         )
         
@@ -325,7 +311,7 @@ def help_button(update, context):
         if mod_match:
             module = mod_match.group(1)
             text = (
-                "Hᴇʀᴇ Iꜱ Tʜᴇ Hᴇʟᴘ「*{}*」 Mᴏᴅᴜʟᴇ:\n".format(
+                "Hᴇʟᴘ「*{}*」 Mᴏᴅᴜʟᴇ:\n".format(
                     HELPABLE[module].__mod_name__
                 )
                 + HELPABLE[module].__help__
@@ -335,7 +321,7 @@ def help_button(update, context):
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton(text="Back", callback_data="help_back")]]
+                    [[InlineKeyboardButton(text="↻ Back", callback_data="help_back")]]
                 ),
             )
 
@@ -381,8 +367,8 @@ def SuzuneHorikitarobot_about_callback(update, context):
     query = update.callback_query
     if query.data == "SuzuneHorikitarobot_":
         query.message.edit_text(
-            text=""" *SuzuneHorikita* - A bot to manage your groups with additional features!
-            \nHere the basic help regarding use of SuzuneHorikitarobot.
+            text=""" *𝙸𝚜𝚊𝚋𝚎𝚕𝚕𝚊* - A bot to manage your groups with additional features!
+            \nHere the basic help regarding use of 𝙸𝚜𝚊𝚋𝚎𝚕𝚕𝚊 Robot.
             
             \nAlmost all modules usage defined in the help menu, checkout by sending /help
             \nReport error/bugs click the Button""",
@@ -392,10 +378,7 @@ def SuzuneHorikitarobot_about_callback(update, context):
                 [
                     [
                         InlineKeyboardButton(
-                            text="Bᴜɢ'ꜱ", url="t.me/Suzune_Support "
-                        ),
-                        InlineKeyboardButton(
-                            text="Bᴏᴛ Lɪꜱᴛ", url="https://t.me/SuzuneSuperbot /32"
+                            text="Bᴜɢ'ꜱ", url="https://t.me/isabella_support "
                         ),
                     ],
                     [InlineKeyboardButton(text="Back", callback_data="SuzuneHorikitarobot_back")],
@@ -422,7 +405,7 @@ def SuzuneHorikitarobot_about_callback(update, context):
             
             f"\n\n Firstly Add {dispatcher.bot.first_name} to your group by pressing [here](http://t.me/{dispatcher.bot.username}?startgroup=true)\n"
             f"\n After adding promote me manually with full rights for faster experience.\n"
-            f"\n Than send /admincache@SuzuneHorikitaRobot in that chat to refresh admin list in My database.\n"
+            f"\n Than send /admincache@isabella_xrobot in that chat to refresh admin list in My database.\n"
             f"\n\n*All done now use below given button's to know about use!*\n"
             f"",
             parse_mode=ParseMode.MARKDOWN,
@@ -495,7 +478,7 @@ def SuzuneHorikitarobot_about_callback(update, context):
         query.message.edit_text(
             text=f"*Let's Make Your Group Bit Effective Now*"
             
-            f"\n Congragulations, SuzuneHorikitaRobot now ready to manage your group."
+            f"\n Congragulations, 𝙸𝚜𝚊𝚋𝚎𝚕𝚕𝚊 Robot now ready to manage your group."
             f"\n\n*Admin Tools*"
             f"\n Basic Admin tools help you to protect and powerup your group."
             f"\n You can ban members, Kick members, Promote someone as admin through commands of bot."
@@ -517,12 +500,12 @@ def SuzuneHorikitarobot_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Lᴏɢ'ꜱ", url="t.me/SuzuneHorikitaLogs"),
-                    InlineKeyboardButton(text="Nᴇᴡꜱ", url="t.me/Suzune_Support "),
+                    InlineKeyboardButton(text="Lᴏɢ'ꜱ", url="t.me/Isabella_Logs"),
+                    InlineKeyboardButton(text="Nᴇᴡꜱ", url="t.me/isabella_support"),
                  ],
                  [
-                    InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url="t.me/Suzune_Support "),
-                    InlineKeyboardButton(text="Uᴘᴅᴀᴛᴇꜱ", url="https://t.me/SuzuneSuperbot "),
+                    InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url="t.me/isabella_support"),
+                    InlineKeyboardButton(text="Uᴘᴅᴀᴛᴇꜱ", url="t.me/isabella_supportw"),
                  ],
                  [
                     InlineKeyboardButton(text="Back", callback_data="SuzuneHorikitarobot_basichelp"),
@@ -562,7 +545,7 @@ def Source_about_callback(update, context):
     if query.data == "source_":
         query.message.edit_text(
             text=""" Hi..Its *SuzuneHorikitarobot*
-                 \nHere is the [Owner](https://t.me/TheVenomXD) .""",
+                 \nHere is the [Owner](https://t.me/cant_think_1) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -815,7 +798,7 @@ def donate(update: Update, context: CallbackContext):
             DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True
         )
 
-        if OWNER_ID != 1947924017 and DONATION_LINK:
+        if OWNER_ID != 5591954930 and DONATION_LINK:
             update.effective_message.reply_text(
                 "You can also donate to the person currently running me "
                 "[here]({})".format(DONATION_LINK),
@@ -863,7 +846,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "*Back Online To Server ⚡*")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "*System Is Online Again 🔋*")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
