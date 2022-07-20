@@ -62,7 +62,7 @@ async def whatanime(e):
         percent = round(js0["similarity"] * 100, 2)
         text += f"<b>Similarity:</b> {percent}%\n"
         at = re.findall(r"t=(.+)&", js0["video"])[0]
-        dt = pendulum.from_timestamp(float(at))
+        dt = pendulum.from_timestamp(float(at.strip("'")))
         text += f"<b>At:</b> {html.escape(dt.to_time_string())}"
         await cut.edit(text, parse_mode="html")
         dt0 = pendulum.from_timestamp(js0["from"])
